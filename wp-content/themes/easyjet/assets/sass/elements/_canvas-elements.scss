@@ -1,0 +1,35 @@
+
+.scene {
+	position: relative;
+	&--full {
+		position: absolute;
+		width: 700px;
+		height: 740px;
+		left: 50%;
+		transform: translateX(-40%);
+		top: 135px;
+		@media (max-width: 850px) {
+			top: 182px;
+			width: 600px;
+			height: 760px;
+		}
+		@media (max-width: 738px) {
+			top: 222px;
+			width: 550px;
+			height: 660px;
+		}
+		@media (max-width: 662px) {
+			top: 222px;
+			width: 450px;
+			height: 560px;
+		}
+		@media (max-width: 551px) {
+			top: 262px;
+			width: 400px;
+			height: 660px;
+		}
+		@media (max-width: 484px) {
+			display: none;
+		}
+	}
+}

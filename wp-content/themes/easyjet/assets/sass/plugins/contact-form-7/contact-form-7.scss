@@ -1,0 +1,25 @@
+.elementor-contact-form-7 {
+	.wpcf7 {
+		&-wrap {
+			display: flex;
+			flex-wrap: wrap;
+			
+			.wpcf7-form-control {
+				&:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"]) {
+					max-width: 100%;
+					width: 100%;
+				}	
+			}
+			
+			.ajax-loader {
+				margin: 17px 0 0 4px;
+			}
+
+			textarea {
+			}
+			.wpcf7-button-wrap {
+				text-align: center;
+			}
+		}
+	}
+}

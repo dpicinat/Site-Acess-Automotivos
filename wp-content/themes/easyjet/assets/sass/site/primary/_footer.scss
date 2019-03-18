@@ -1,0 +1,17 @@
+.site-info {
+	font-size: .857rem;
+	line-height: 1.75;
+}
+.footer-area {
+	padding: 50px 0 33px;
+
+	.widget-title.title-decoration {
+		padding: 0;
+
+		&:before,
+		&:after {
+			display: none!important;
+		}
+	}
+}
+@import "footer/layout-style-1";

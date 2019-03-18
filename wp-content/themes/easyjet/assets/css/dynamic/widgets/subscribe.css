@@ -1,0 +1,30 @@
+.subscribe-block__input { color: $regular_text_color; }
+
+.subscribe-block__input-wrap i {
+	color: @lighten($regular_text_color, 25%);
+}
+
+.widget-subscribe .subscribe-follow__wrap {
+	-webkit-box-shadow: 0 2px 20px 2px rgba(81,81,81,0.07);
+	box-shadow: 0 2px 20px 2px rgba(81,81,81,0.07);	
+}
+.subscribe-block + .follow-block {
+	border-color: $grey_color_1;
+}
+
+.follow-block .social-list__items .menu-item:after {
+	background-color: $regular_accent_color_3; 
+}
+.follow-block .social-list__items .menu-item:before {
+	border-color: $grey_color_1;
+}
+.follow-block .social-list__items .menu-item + a:hover,
+.social-list a {
+	color: $regular_text_color;
+}
+.follow-block .social-list__items .menu-item + a:hover {
+	color: $regular_accent_color_2;
+}
+.follow-block .social-list__items .menu-item a:hover {
+	color: $regular_link_hover_color;
+}

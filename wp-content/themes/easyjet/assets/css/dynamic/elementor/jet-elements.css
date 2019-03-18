@@ -1,0 +1,15 @@
+/* jet-animated-box*/
+.jet-animated-box__subtitle span {
+	background-color: $invert_accent_color_1;
+}
+
+/*Custom JetSlider JET-SLIDER-LIST*/
+.jet-slider-list .jet-slider__title {
+	font-weight: $h1_font_weight;
+}
+.jet-slider-list .jet-slider__title span {
+	font-weight: $h2_font_weight;
+}
+.jet-slider-list .jet-slider__desc ul li {
+	font-weight: $h5_font_weight;
+}

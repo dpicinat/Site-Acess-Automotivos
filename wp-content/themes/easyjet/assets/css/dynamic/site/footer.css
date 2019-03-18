@@ -1,0 +1,30 @@
+/* #Footer */
+.site-footer {
+	background-color: $footer_bg;
+}
+.site-footer.style-1 .site-info-first-row {
+	background-color: $footer_bg_first;
+}
+.footer-area-wrap {
+	background-color: $footer_widgets_bg;
+}
+
+/* ##Invert Footer Style*/
+.invert.footer-area-wrap,
+.invert.footer-container,
+.invert .footer-logo--with-slogan .site-description {
+	color: $regular_text_color;
+}
+
+.footer-copyright {
+	font-weight: $h6_font_weight;
+	font-size: $h5_font_size{px};
+	font-family: @font_family( $h6_font_family );
+}
+
+.invert .footer-copyright a {
+	color: $regular_link_color;
+}
+.invert .footer-copyright a:hover {
+	color: $invert_accent_color_1;
+}

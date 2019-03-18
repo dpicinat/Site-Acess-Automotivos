@@ -1,0 +1,32 @@
+/* #Contact-information*/
+.contact-information-widget__inner {
+	font-family: @font_family( $h1_font_family );
+}
+.contact-information-widget .icon {
+	color: $grey_color_1;
+}
+.invert .contact-information-widget .icon {
+	color: @darken($grey_color_3, 7.5);
+}
+.contact-information-widget__inner li {
+	font-style: $body_font_style;
+	font-weight: $body_font_weight;
+font-size: $body_font_size{px};
+line-height: $body_line_height;
+font-family: @font_family( $body_font_family );
+letter-spacing: $body_letter_spacing{em};
+}
+.invert .contact-information-widget .icon,
+.invert .contact-information-widget a[href*="mailto:"]:hover {
+	color: $regular_accent_color_1;
+}
+.invert .contact-information-widget a[href*="mailto:"] {
+	color: $invert_text_color;
+}
+
+a[href*="?media_dl="] {
+	background-color: $regular_accent_color_2;
+}
+a[href*="?media_dl="]:hover {
+	background-color: $regular_accent_color_1;
+}

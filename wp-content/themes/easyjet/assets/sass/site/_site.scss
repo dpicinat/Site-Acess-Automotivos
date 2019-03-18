@@ -1,0 +1,111 @@
+.site {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	.wordwrap & {
+		@include hyphens(auto);
+	}
+	&-header,
+	&-content,
+	&-footer {
+		width: 100%;
+	}
+
+	&-content {
+		flex: auto;
+		min-height: 1px;
+	}
+
+	&-main{}
+
+	&-content_wrap {
+		margin-top: $site-content-top-indent;
+		margin-bottom: $site-content-bottom-indent;
+		.elementor-page & {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.error404 &,
+		.search.search-no-results & {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.sidebar,
+		.single-service,
+		.single-project {
+			position: relative;
+
+			.position-one-right-sidebar &,
+			.position-one-left-sidebar & {
+				@include media-breakpoint-up(lg) {
+					&:before {
+						position: absolute;
+						width: 1px;
+						height: 100%;
+						content: '';
+						top: 0;
+					}
+				}
+			}
+
+			.position-one-right-sidebar & {
+				@include media-breakpoint-up(lg) {
+					&:before {
+						left: 20px;
+					}
+				}
+			}
+			.position-one-left-sidebar & {
+				@include media-breakpoint-up(lg) {
+					&:before {
+						right: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.title-decoration,
+.title-decoration__big {
+	&.title-decoration__bottom {
+		padding-bottom: 0 !important;
+	}
+
+	&:before,
+	&:after {
+		&,
+		.footer-area & {
+			display: none !important;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+@import "../layout/layout";
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+@import "primary/header";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Post Formats
+--------------------------------------------------------------*/
+@import "primary/post-formats";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+@import "primary/footer";

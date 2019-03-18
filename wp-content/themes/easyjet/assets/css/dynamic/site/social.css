@@ -1,0 +1,35 @@
+.single-post .share-btns__link:after {
+	background-color: $regular_accent_color_3; 
+}
+.single-post .share-btns__link:before {
+	border-color: $grey_color_1;
+}
+.single-post .share-btns__link:hover,
+.social-list a {
+	color: $regular_text_color;
+}
+.share-btns__link:hover,
+.social-list a:hover {
+	color: $regular_accent_color_2;
+}
+.invert .social-list a {
+	color: @lighten($invert_text_color, 10);
+}
+.invert .share-btns__link:hover,
+.invert .social-list a:hover {
+	color: $regular_link_color;
+}
+.posts-list .share-btns__link i {
+	color: $regular_accent_color_2;
+}
+.posts-list .share-btns__link:hover i {
+	color: $regular_link_hover_color;
+}
+
+.social-list--header:before {
+	background-color: rgba(255, 255, 255, 0.3)
+}
+
+.invert .social-list--footer a {
+	color: $regular_text_color;
+}

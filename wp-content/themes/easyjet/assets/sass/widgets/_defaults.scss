@@ -1,0 +1,305 @@
+.widget {
+	ul {
+		margin-bottom: 0;
+		padding: 0;
+		margin-left: 0;
+		list-style: none;
+
+		li {
+			& + li,
+			> ul li,
+			> ol li {
+				margin-top: 5px;
+			}
+			> ul {
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget Calendar
+--------------------------------------------------------------*/
+.widget_calendar {
+	.widget-title {
+		margin-bottom: 25px;
+	}
+	table {
+		margin-bottom: 0;
+		table-layout: fixed;
+		width: 100%;
+		position: relative;
+	}
+
+	thead {
+		text-align: center;
+		border-top: none;
+	}
+	caption {
+		text-align: center;
+		padding: 10px 0;
+		border-radius: $border__radius;
+		margin-bottom: 5px;
+		border: 1px solid;
+	}
+	th {
+		padding: 6px 0;
+		font-weight: inherit;
+		position: relative;
+	}
+	tbody td {
+		position: relative;
+		text-align: center;
+		line-height: 53px;
+		height: 43px;
+
+		&:not(.pad):after {
+			content: '';
+			width: 48px;
+			height: 48px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			border-radius: $border__radius;
+			z-index: -1;
+		}
+		a {
+			display: inline-block;
+			width: 46px;
+			max-width: 100%;
+			height: 46px;
+			line-height: 43px;
+			position: relative;
+			z-index: 10;
+			border: 1px solid;
+			border-radius: $border__radius;
+		}
+	}
+	tfoot td {
+		position: absolute;
+		top: 11px;
+
+		a {
+			font-size: 0;
+			&:before {
+				@include font-awesome-icon();
+				content: '\f104';
+				font-size: 18px;
+				line-height: 26px;
+				transition: .3s;
+			}
+		}
+		&#prev {
+			left: 20px;
+
+			a:before {
+				content: '\f104';
+			}
+		}
+		&#next {
+			right: 20px;
+
+			a:before {
+				content: '\f105';
+			}
+		}
+
+	}
+	td#today {
+	}
+	#next {
+		text-align: right;
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget Tag Cloud
+--------------------------------------------------------------*/
+.tagcloud {
+	margin: 0;
+
+	a {
+		position: relative;
+		display: inline-block;
+		margin-left: 2px;
+		vertical-align: top;
+		text-decoration: none;
+		text-transform: uppercase;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:focus {
+		}
+		&:first-child {
+			margin-left: 0;
+			&:before {
+				display: none;
+			}
+		}
+		&:before {
+			position: absolute;
+			content: ",";
+			margin: 0;
+			bottom: 0;
+			left: -3px;
+			font-size: inherit;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget Recent Posts
+--------------------------------------------------------------*/
+.widget_recent_entries {
+	ul li {
+		display: flex;
+		flex-direction: column-reverse;
+
+		a {
+		}
+		.post-date {
+			display: block;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget Nav Menu
+--------------------------------------------------------------*/
+.widget_nav_menu {
+	ul li {
+		a {
+			&:before {
+				content: '\ea21';
+				font-size: 12px;
+				margin-right: 10px;
+				transition: .3s all;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget Recent Comments
+--------------------------------------------------------------*/
+.widget_recent_comments {
+	ul li {
+		@extend .clear;
+		& + li {
+			margin-top: 14px;
+		}
+		.comment-author-link {
+			margin-right: 1px;
+
+			& ~ a {
+				font-style: normal;
+				font-weight: bold;
+
+				&:before {
+					content: '';
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget RSS
+--------------------------------------------------------------*/
+.rss-widget-icon {
+	vertical-align: middle;
+}
+
+.widget_rss {
+	ul {
+		li {
+			& + li {
+				margin-top: 20px;
+			}
+
+			display: flex;
+			flex-direction: column;
+		}
+		a.rsswidget {
+			font-weight: 900;
+		}
+
+		.rss-date {
+			order: -1;
+		}
+	}
+	.rssSummary {
+		margin-top: 5px;
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget Archives - Categories
+--------------------------------------------------------------*/
+.widget_archive,
+.widget_categories {
+	position: relative;
+	
+	.widget-title {
+		margin-bottom: 24px;
+	}
+
+	select {
+		width: 100%;
+		appearance: none;
+		position: relative;
+		height: 50px;
+
+		&:hover {
+			cursor: pointer;
+		}
+		select::-ms-expand {
+			opacity: 0;
+		}
+	}
+	label {
+		position: relative;
+		width: 100%;
+		height: 50px;
+
+		&:before {
+			@include font-awesome-icon;
+
+			content: '\f107';
+			position: absolute;
+			font-size: 18px;
+			right: 18px;
+			top: 50%;
+			transform: translateY(-50%);
+			display: inline-block;
+			z-index: 1;
+			pointer-events: none;
+		}
+	}
+	.screen-reader-text {
+		clip: auto;
+		font-size: 0;
+	}
+	ul li {
+		display: block;
+	}
+	a {
+		transition: .2s;
+	}
+}
+
+/*--------------------------------------------------------------
+## Textwidget
+--------------------------------------------------------------*/
+.textwidget {
+	p {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+}
+

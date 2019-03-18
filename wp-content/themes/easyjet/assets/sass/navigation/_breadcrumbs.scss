@@ -1,0 +1,44 @@
+.breadcrumbs {
+	position: relative;
+	padding: 34px 0 33px;
+	.row {
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		z-index: 10;
+	}
+	&__title,
+	&__items {
+		padding-left: $grid-gutter-width/2;
+		padding-right: $grid-gutter-width/2;
+	}
+
+	&__title {
+	}
+
+	&__browse {
+		display: inline-block;
+		margin-right: .5em;
+	}
+	&__wrap {
+		margin: 5px 0;
+		display: inline-block;
+	}
+	&__item {
+		display: inline-block;
+		text-transform: uppercase;
+
+		&-sep {
+			margin: 0 1.5px;
+		}
+		&-link {
+			text-decoration: none;
+
+			&:hover {
+
+			}
+		}
+		&-target {
+		}
+	}
+}
